@@ -1,4 +1,6 @@
-# GDG Member Finder Extension
+# GDG User Finder Extension
+
+> **⚠️ Caution**: This is **not an official GDG extension**. It's a community-developed tool created by GDG organizers to solve a specific workflow challenge.
 
 A Chrome extension designed to help GDG organizers efficiently add hidden members to their core team by fetching internal User IDs from member pages.
 
