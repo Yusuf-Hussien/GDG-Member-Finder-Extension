@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "GDG Member Fixer",
+  "name": "GDG Member Finder",
   "version": "1.0",
   "description": "Chrome extension to help GDG organizers add hidden members to core team by fetching internal User ID from member pages.",
   "permissions": [
