@@ -84,6 +84,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                 showStatus("Data received but no User ID found. Member might not have joined the chapter.", 'error');
             }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
         } catch (error) {
             console.error(error);
             showStatus("Error occurred! Make sure you're an Organizer with proper permissions and are logged in.", 'error');
