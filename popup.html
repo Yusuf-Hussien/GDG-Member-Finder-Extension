@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GDG Organizer Helper</title>
+    <style>
+        body {
+            width: 340px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #3c4043;
+        }
+
+        .container {
+            padding: 20px;
+            background: #fff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e8eaed;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            margin: 0;
+            color: #4285F4;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .gdg-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4285F4 0%, #34A853 25%, #FBBC05 50%, #EA4335 75%, #4285F4 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        p.subtitle {
+            margin: 5px 0 0;
+            font-size: 12px;
+            color: #5f6368;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #202124;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border 0.2s;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border: 2px solid #4285F4;
+            padding: 9px 11px;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(66, 133, 244, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #3367D6 0%, #2E8B57 100%);
+            box-shadow: 0 4px 8px rgba(66, 133, 244, 0.4);
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        /* Status Messages */
+        #status {
+            margin-top: 15px;
+            font-size: 13px;
+            line-height: 1.5;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+            /* Hidden by default */
+        }
+
+        .status-success {
+            background-color: #e6f4ea;
+            color: #137333;
+            border: 1px solid #ceead6;
+        }
+
+        .status-loading {
+            background-color: #e8f0fe;
+            color: #1967d2;
+            border: 1px solid #d2e3fc;
+        }
+
+        .status-error {
+            background-color: #fce8e6;
+            color: #c5221f;
+            border: 1px solid #fad2cf;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #bdc1c6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h3><span class="gdg-badge">GDG</span> Member Fixer</h3>
+            <p class="subtitle">Add hidden Core Team members</p>
+        </header>
+
+        <div class="form-group">
+            <label for="memberIdInput">Member ID</label>
+            <input type="text" id="memberIdInput" placeholder="e.g: 1339656 (auto-detected from URL)">
+        </div>
+
+        <button id="fixBtn">
+            <span>Get User ID</span>
+        </button>
+
+        <div id="status"></div>
+
+        <div class="footer">
+            GDG Organizers Tool
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
