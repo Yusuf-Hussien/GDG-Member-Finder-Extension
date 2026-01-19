@@ -103,9 +103,9 @@ After logging into your GDG account:
 
 ## 👥 Contributors
 
-- **Omar El Kashab** - [github.com/Omaraldin](https://github.com/Omaraldin)
-- **Mohamed Abdulrhim** - [github.com/Vlhoseny](https://github.com/Vlhoseny)
-- **Yusuf Hussien** - [github.com/Yusuf-Hussien](https://github.com/Yusuf-Hussien)
+- **Omar El Khashab** - [Omaraldin](https://github.com/Omaraldin)
+- **Mohamed Abdulrhim** - [Vlhoseny](https://github.com/Vlhoseny)
+- **Yusuf Hussien** - [Yusuf-Hussien](https://github.com/Yusuf-Hussien)
 
 ## 📄 License
 
