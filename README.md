@@ -6,8 +6,14 @@ A Chrome extension designed to help GDG organizers efficiently add hidden member
 
 ## 🚨 Problem Statement
 
-As GDG on Campus Organizers, we faced a significant problem while adding our team members to the chapter page due to the poor manual process. The traditional method required:
+As GDG on Campus Organizers, we faced significant problems while adding our team members to chapter page due to poor manual process:
 
+### Search Accuracy Issues
+- **Name-only searching**: Risk of adding wrong member by mistake due to similar names
+- **Account visibility**: Not all accounts are visible in search results due to account types and syncing issues
+- **No email filtering**: Limited search options increased error probability
+
+### Manual Process Inefficiencies
 - Manual navigation through multiple pages
 - Complex URL manipulation
 - Technical knowledge of GDG's internal API structure
@@ -17,9 +23,11 @@ This inefficiency was consuming valuable organizer time and creating barriers to
 
 ## ✅ Solution
 
-We developed the GDG Member Finder extension to solve these challenges by:
+We developed GDG User Finder extension to solve these challenges by:
 
-- **Automating the User ID discovery process**
+- **Email & Name Search**: Search with name or email for more accuracy, reducing wrong member additions
+- **Account Type Handling**: Works with various account types and syncing statuses
+- **Automating User ID discovery process**
 - **Eliminating manual URL manipulation**
 - **Removing the need for technical API knowledge**
 - **Reducing time cost from ~90 seconds to ~5 seconds per member**
@@ -56,9 +64,10 @@ We developed the GDG Member Finder extension to solve these challenges by:
 
 ### Step 1: Access Admin Dashboard
 After logging into your GDG account:
-- Open the admin dashboard
-- Switch to the legacy board as shown by the first arrow
-- Navigate to the members table
+- Open admin dashboard
+- Switch to legacy board as shown by the first arrow
+- Navigate to members table
+- **Important**: The member you want to add should have already joined your chapter page before starting this process
 
 ![Step 1](preview/User-Manual/step-1.png)
 
