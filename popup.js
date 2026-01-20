@@ -83,21 +83,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else {
                 showStatus("Data received but no User ID found. Member might not have joined the chapter.", 'error');
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             
         } catch (error) {
             console.error(error);
@@ -109,3 +94,38 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
+
+
+
+/*
+document.addEventListener('DOMContentLoaded', async () => {
+    // 1. Define HTML elements
+    const btn = document.getElementById('fixBtn');
+    const statusDiv = document.getElementById('status');
+    const inputField = document.getElementById('memberIdInput');
+
+    // 2. Helper function to display messages with new styling
+    function showStatus(message, type) {
+        statusDiv.style.display = 'block';
+        statusDiv.textContent = message;
+        // Set class based on message type (success, error, or loading)
+        if (type === 'success') {
+            statusDiv.className = 'status-success';
+        } else if (type === 'loading') {
+            statusDiv.className = 'status-loading';
+        } else {
+            statusDiv.className = 'status-error';
+        }
+    }
+
+    // 3. Read current URL to auto-fill data
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    // Extract chapter ID and member ID from URL using Regex
+    // URL Pattern example: .../chapter-12345/.../member-987654
+    const chapterMatch = tab.url.match(/chapter-(\d+)/);
+    const memberMatch = tab.url.match(/member-(\d+)/);
+
+    // Store chapter ID as we'll need it for the API call
+    let chapterId = chapterMatch ? chapterMatch[1] : null;
+*/
