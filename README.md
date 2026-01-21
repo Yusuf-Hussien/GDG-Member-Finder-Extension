@@ -101,11 +101,46 @@ After logging into your GDG account:
 
 ## 🔧 Technical Details
 
+### Tech Stack
+* **Manifest V3:** Compliant with the latest Chrome Extension standards.
+
+
 ### How It Works
 1. Extracts Chapter ID and Member ID from current page URL
 2. Calls GDG's internal API: `https://gdg.community.dev/api/chapter/{chapterId}/member/{memberId}`
 3. Retrieves the hidden User ID from API response
 4. Navigates to: `https://gdg.community.dev/accounts/dashboard/#/chapter-{chapterId}/settings/newmember-{userId}`
+
+
+### Extension Flow Diagram
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant B as Browser
+    participant E as Extension
+    participant A as GDG API
+    participant P as GDG Platform
+    
+    U->>B: Navigate to GDG Member Page<br/>https://gdg.community.dev/member/{memberId}
+    
+    B->>E: Page loaded (Triggers extension)
+    
+    E->>E: Extract Chapter ID & Member ID<br/>from current URL
+    
+    Note over E: URL Pattern Detection
+    
+    E->>A: GET https://gdg.community.dev/api/<br/>chapter/{chapterId}/member/{memberId}
+    
+    A-->>E: Returns JSON Response
+    
+    E->>E: Parse response, extract<br/>hidden User ID
+    
+    Note over E: Extracted Data:<br/>• User ID (hidden)<br/>• Member Details
+    
+    E->>P: Redirect/Auto-navigate to:<br/>https://gdg.community.dev/accounts/dashboard/#/<br/>chapter-{chapterId}/settings/newmember-{userId}
+    
+    P-->>B: Loads admin dashboard page
+```
 
 ### Permissions
 - `activeTab`: Access current tab information
@@ -132,4 +167,4 @@ For support or questions, please open an issue in the GitHub repository.
 
 ---
 
-**GDG Member Finder** - Making team management efficient for GDG organizers worldwide! 🚀
+**GDG Member Finder** - Making core team management efficient for GDG organizers worldwide! 🚀
